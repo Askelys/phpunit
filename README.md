@@ -1,6 +1,6 @@
 # phpunit
 
-docker phpunit image 
+phpunit docker image
 
 - [phpunit 9](https://phpunit.de/getting-started/phpunit-9.html)
 - php 7.3
