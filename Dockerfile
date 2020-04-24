@@ -21,7 +21,7 @@ RUN curl -L https://github.com/xdebug/xdebug/archive/${XDEBUG_VERSION}.tar.gz -o
 
 # php configuration
 RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
-    && echo 'zend_extension="/usr/local/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so"' >> $PHP_INI_DIR/php.ini
+    && echo 'zend_extension="xdebug.so"' >> $PHP_INI_DIR/php.ini
 
 WORKDIR /app
 
