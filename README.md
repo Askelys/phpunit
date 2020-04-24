@@ -8,6 +8,9 @@ phpunit docker image
 
 ## docker compose usage
 docker-compose.yml file example
+
+for options see [phpunit command-line documentation](https://phpunit.readthedocs.io/en/9.1/textui.html#command-line-options) 
+
 ```yaml
 version: "3.7"
 services:
