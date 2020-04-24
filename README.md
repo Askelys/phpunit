@@ -9,19 +9,7 @@ phpunit docker image
 ## docker usage
 
 - for options see [phpunit command-line documentation](https://phpunit.readthedocs.io/en/9.1/textui.html#command-line-options) 
-- if you want use **phpunit.xml** file instead of **environment variables** for options declare environment variables with empty string
-
-### environment variables
-
-- default environment variable values if not specified
-- assume **test/** and **src/** folders exists with file ***Test.php** inside test folder
-
-```yaml
-PHPUNIT_COVERAGE_OPTION: "--coverage-clover coverage.xml --whitelist src"
-PHPUNIT_LOG_OPTION: "--log-junit log.xml"
-PHPUNIT_OPTIONS: ""
-PHPUNIT_TARGET: "test"
-```
+- **environment variables** have priority to configuration file **phpunit.xml**
 
 ### docker-compose.yml file example
 ```yaml
@@ -31,8 +19,6 @@ services:
   phpunit:
     image: askelys/phpunit:9-php7.3
     environment:
-        PHPUNIT_COVERAGE_OPTION: ""
-        PHPUNIT_LOG_OPTION: ""
         PHPUNIT_OPTIONS: ""
         PHPUNIT_TARGET: ""
     volumes: 
