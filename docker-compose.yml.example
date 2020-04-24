@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
   phpunit:
-    container_name: phpunit_test
+    container_name: phpunit
     build: .
     image: askelys/phpunit:9-php7.3
     environment:

@@ -14,10 +14,10 @@ phpunit docker image
 ### environment variables
 
 - default environment variable values if not specified
-- assume **test/** folder exist with file ***Test.php** inside
+- assume **test/** and **src/** folders exists with file ***Test.php** inside test folder
 
 ```yaml
-PHPUNIT_COVERAGE_OPTION: "--coverage-clover coverage.xml --whitelist test"
+PHPUNIT_COVERAGE_OPTION: "--coverage-clover coverage.xml --whitelist src"
 PHPUNIT_LOG_OPTION: "--log-junit log.xml"
 PHPUNIT_OPTIONS: ""
 PHPUNIT_TARGET: "test"

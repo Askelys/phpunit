@@ -1,6 +1,6 @@
 FROM php:7.3
 
-ENV PHPUNIT_COVERAGE_OPTION="--coverage-clover coverage.xml --whitelist test"
+ENV PHPUNIT_COVERAGE_OPTION="--coverage-clover coverage.xml --whitelist src"
 ENV PHPUNIT_LOG_OPTION="--log-junit log.xml"
 ENV PHPUNIT_OPTIONS=""
 ENV PHPUNIT_TARGET="test"
