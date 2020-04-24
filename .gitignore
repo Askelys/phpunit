@@ -1,4 +1,4 @@
 src/
 test/
-docker-compose.yml
+*.yml
 *.xml

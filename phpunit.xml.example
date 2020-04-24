@@ -1,0 +1,16 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="test">
+            <directory>test</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">test</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-clover" target="coverage.xml"/>
+        <log type="junit" target="log.xml"/>
+    </logging>
+</phpunit>

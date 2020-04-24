@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+
+  phpunit:
+    container_name: phpunit_test
+    build: .
+    image: askelys/phpunit:9-php7.3
+    environment:
+      PHPUNIT_COVERAGE_OPTION: ""
+      PHPUNIT_LOG_OPTION: ""
+      PHPUNIT_OPTIONS: ""
+      PHPUNIT_TARGET: ""
+    volumes: 
+        - "./:/app"
