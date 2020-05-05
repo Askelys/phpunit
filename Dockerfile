@@ -6,7 +6,14 @@ ENV XDEBUG_VERSION="2.9.4"
 WORKDIR /tmp
 
 # phpunit installation
-RUN curl -L https://phar.phpunit.de/phpunit-9.phar -o /usr/bin/phpunit \
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y subversion default-mysql-client && \
+    apt-get autoremove -y && apt-get clean
+
+RUN docker-php-ext-install mysqli
+
+# phpunit installation
+RUN curl -L https://phar.phpunit.de/phpunit-7.phar -o /usr/bin/phpunit \
     && chmod +x /usr/bin/phpunit
 
 # xdebug installation
